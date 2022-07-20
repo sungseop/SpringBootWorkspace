@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.target {
+	background-color : red;
+}
+</style>
+</head>
+<body>
+	<ul>
+		<!--/* '[[ ]]': 태그로 속성을 지정하지 않고 값을 출력할 때 사용 */-->
+		
+		<!--/* if와 unless문 
+		<li th:each="board, state : ${boardList}">
+			<span  style="color:blue;" th:if="${board.seq % 5 == 0}" th:text="${'-----'+board.seq}"></span>
+			<span th:unless="${board.seq % 5 == 0}" th:text="${board.seq}"></span>
+		</li>
+		*/-->
+		
+		<!--/* ?연산자: <조건식> ? <첫번째식> : <두번째식> */-->
+		<!--/*
+		<li th:each="board,state : ${boardList}" th:text="${board.seq % 5 == 0} ? ${'----'+board.seq} : ${board.seq}"></li>
+		*/-->
+		
+		<li th:each="board,state : ${boardList}" th:class="${board.seq % 5 == 0} ? 'target'" th:text="${board}"></li>
+	</ul>
+</body>
+</html>

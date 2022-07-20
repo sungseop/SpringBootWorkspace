@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;manager.html&apos; to &apos;manager.html&apos;&#x0D;&#x0A;- Original project: &apos;Chapter07&apos;&#x0D;&#x0A;- Destination element: &apos;manager.html&apos;&#x0D;&#x0A;- Original element: &apos;manager.html&apos;" description="Copy file" element1="src/main/resources/templates/manager.html" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1657676326470" target="/Chapter07/src/main/resources/templates/manager.html" units="0" version="1.0"/>
+</session>

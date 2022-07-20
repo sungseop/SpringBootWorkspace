@@ -1,0 +1,30 @@
+package com.ezen;
+
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.env.Environment;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import com.ezen.controller.BoardController;
+
+@RunWith(SpringRunner.class)
+//@SpringBootTest //application.properties의 내용을 읽어서 테스트에 적용
+@SpringBootTest(classes=BoardController.class,
+				properties= {"author.name=GilDong",
+							 "author.age=35",
+							 "author.nation=korea"}) // @SpringBootTest에 직접 속성 지정
+public class PropertiesTest {
+	
+	// 프로퍼티 사용 설정
+	@Autowired
+	Environment environment;	// 외부 프로퍼티 사용
+	
+	@Test
+	public void testMethod() {
+		System.out.println("이름: " + environment.getProperty("author.name"));
+		System.out.println("나이: " + environment.getProperty("author.age"));
+		System.out.println("국가: " + environment.getProperty("author.nation"));
+	}
+}

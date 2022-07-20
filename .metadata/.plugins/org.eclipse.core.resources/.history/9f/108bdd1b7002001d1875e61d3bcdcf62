@@ -1,0 +1,19 @@
+package com.ezen.config;
+
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+public class BoardUserDetailsService implements UserDetailsService {
+
+	public BoardUserDetailsService() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	// MemberRepository를 통해 회원 정보를 조회하여 스프링에서 인증 관리를 하기 위해 UserDetails 객체에 저장하여 리턴함
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		return null;
+	}
+
+}

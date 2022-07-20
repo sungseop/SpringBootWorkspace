@@ -1,0 +1,11 @@
+package com.ezen.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+public class BoardController {
+
+	@GetMapping("/hello")
+	public String hello(String name) {
+		return "Hello: " + name;
+	}
+}

@@ -1,0 +1,9 @@
+package com.ezen;
+
+public class passwordEncoderTest {
+
+	public passwordEncoderTest() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
